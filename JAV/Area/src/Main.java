@@ -1,6 +1,6 @@
-import Areas.Square;
-import Areas.Triangle;
-import Areas.Circle;
+import U1_TI_02_Area.Square;
+import U1_TI_02_Area.Triangle;
+import U1_TI_02_Area.Circle;
 
 public class Main{
     public static void main(String[] args) throws Exception {
