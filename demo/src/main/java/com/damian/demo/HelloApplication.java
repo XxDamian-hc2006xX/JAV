@@ -15,12 +15,12 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Label cheeto = new Label("Hola mundo");
+        Label cheeto = new Label("Hola mundo, esta es mi primera chamba ejeej");
         Image image = new Image(getClass().getResourceAsStream("/Images/artist_2288766.png"));
         StackPane root = new StackPane(cheeto);
 
         Scene scene = new Scene(root, 320, 240);
-        stage.setTitle("app!");
+        stage.setTitle("Gael Damian Hernandez Carranza");
         stage.getIcons().add(image);
         stage.setScene(scene);
         stage.show();
