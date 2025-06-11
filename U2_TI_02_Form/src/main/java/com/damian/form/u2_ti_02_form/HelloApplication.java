@@ -33,15 +33,17 @@ public class HelloApplication extends Application {
 
      btnCrear.setOnAction(e -> {
         String nombre =tfNombre.getText();
-        int edad =Integer.parseInt(tfEdad.getText());
+        String edad = tfEdad.getText();
         String seleccion = cbOpciones.getSelectionModel().getSelectedItem();
-        if(nombre.isEmpty() || (edad== null) || (seleccion == null)){
+        if(nombre.isEmpty() || edad.isEmpty() || (seleccion == null)){
             System.out.println("Falta Rellenar datos");
             lblresultado.setText("Llena todo los campos hermano");
         } else {
-            lblresultado.setText("Nombre: " + nombre+"\nEdad: " + edad  +"\nOpciones: " + seleccion);
+
+            lblresultado.setText("Usuario creado"+ "\nNombre: " + nombre+"\nEdad: " + edad  +"\nOpciones: " + seleccion);
             lblresultado.setStyle("-fx-background-color: Green");
             form.setStyle("-fx-background-color: LightGreen");
+            System.out.println("Usuario guardado");
         }
      });
      form.setAlignment(Pos.CENTER);
