@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.tt04_s2.HelloController">
+
+    <!-- Menú lateral -->
+    <left>
+        <VBox spacing="15" alignment="TOP_CENTER" style="-fx-background-color: #f2f2f2;" prefWidth="80">
+            <Button text="🏠" />
+            <Button text="Personal" rotate="-45" />
+            <Button text="Mesas" rotate="-45" />
+            <Button text="Menú" rotate="-45" />
+            <Button text="Orden" rotate="-45" />
+        </VBox>
+    </left>
+
+    <!-- Contenido central -->
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="Planeación" />
+
+            <BorderPane style="-fx-border-color: lightgray; -fx-border-radius: 10;">
+                <padding>
+                    <Insets top="15" right="15" bottom="15" left="15"/>
+                </padding>
+
+                <!-- Top de tarjeta -->
+                <top>
+                    <HBox spacing="15" alignment="CENTER_LEFT">
+                        <Circle radius="25" fill="LIGHTGRAY" />
+                        <Label text="Nombre del líder de mesero/Admin" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Label text="Fecha" />
+                    </HBox>
+                </top>
+
+                <!-- Campo de entrada y botón -->
+                <center>
+                    <HBox spacing="10">
+                        <TextField fx:id="campoPlaneacion" promptText="Planeación" />
+                        <Button text="Aplicar" fx:id="btnAplicar" />
+                    </HBox>
+                </center>
+
+                <!-- Lista de planeación -->
+                <bottom>
+                    <VBox spacing="5" prefHeight="200">
+                        <ListView fx:id="listaPlaneacion" />
+                        <HBox alignment="CENTER_RIGHT" spacing="10">
+                            <Label text="← 0 · 2 →" />
+                        </HBox>
+                    </VBox>
+                </bottom>
+
+            </BorderPane>
+        </VBox>
+    </center>
+</BorderPane>

@@ -6,10 +6,12 @@ public abstract class Persona {
         this.nombre = nombre;
         this.email = email;
     }
-    public String getNombre() {
+    public String getNombre()
+    {
         return nombre;
     }
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre)
+    {
         this.nombre = nombre;
     }
     public String getEmail() {
@@ -18,5 +20,6 @@ public abstract class Persona {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
 }
